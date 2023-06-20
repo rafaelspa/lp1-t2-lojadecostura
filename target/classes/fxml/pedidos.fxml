@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="245.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lojacosturafx.controllers.PedidoController">
+    <children>
+        <VBox layoutX="26.0" layoutY="22.0" spacing="15.0" />
+
+        <HBox layoutX="26.0" layoutY="202.0" spacing="10.0" />
+
+        <TableView fx:id="tvPedidos" layoutX="26.0" layoutY="65.0" prefHeight="274.0" prefWidth="684.0">
+            <columns>
+                <TableColumn fx:id="tcId" prefWidth="35.0" text="ID" />
+                <TableColumn fx:id="tcDataEntrega" prefWidth="72.79998779296875" text="Dt Ent." />
+                <TableColumn fx:id="tcPago" prefWidth="52.79998779296875" text="Pago" />
+                <TableColumn fx:id="tcSituacao" prefWidth="71.99996948242188" text="Situacao" />
+                <TableColumn fx:id="tcTipoPagamento" prefWidth="88.7999267578125" text="Tipo Pagamento" />
+                <TableColumn fx:id="tcDataPagamento" prefWidth="99.2000732421875" text="Dt. Pg." />
+                <TableColumn fx:id="tcOrcamento" prefWidth="99.2000732421875" text="Orcamento" />
+            </columns>
+        </TableView>
+
+      <Button fx:id="btnHome" layoutX="558.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#onCliqueHome" prefHeight="26.0" prefWidth="94.0" text="Home" />
+          <Label layoutX="53.0" layoutY="473.0" text="Situacao">
+              <font>
+                  <Font size="14.0" />
+              </font>
+          </Label>
+          <Label layoutX="45.0" layoutY="436.0" text="Tipo Pgmt.">
+              <font>
+                  <Font size="14.0" />
+              </font>
+          </Label>
+      <DatePicker fx:id="dpDataEntrega" layoutX="133.0" layoutY="349.0" prefHeight="26.0" prefWidth="190.0" />
+      <CheckBox fx:id="checkBoxPago" layoutX="356.0" layoutY="353.0" mnemonicParsing="false" onAction="#onCliquePago" prefHeight="18.0" prefWidth="72.0" text="Pago" />
+      <DatePicker fx:id="dpDataPago" layoutX="133.0" layoutY="387.0" prefHeight="26.0" prefWidth="189.0" />
+          <Button fx:id="deletePedidoButton" layoutX="466.0" layoutY="395.0" mnemonicParsing="false" onAction="#deletePedidoButton" prefHeight="35.0" prefWidth="130.0" text="Delete" />
+          <Button fx:id="updatePedidoButton" layoutX="466.0" layoutY="354.0" mnemonicParsing="false" onAction="#updatePedidoButton" prefHeight="35.0" prefWidth="130.0" text="Update" />
+      <Label layoutX="46.0" layoutY="352.0" text="Data Entrega">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="7.0" layoutY="390.0" text="Data Pagamento">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnOrcamentos" layoutX="663.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#onCliqueOrcamento" prefHeight="26.0" prefWidth="94.0" text="Orcamentos" />
+      <ComboBox fx:id="cbTipoPagamento" layoutX="133.0" layoutY="434.0" onAction="#onTipoPagamento" prefHeight="26.0" prefWidth="189.0" />
+      <ComboBox fx:id="cbSituacao" layoutX="133.0" layoutY="470.0" onAction="#onSituacao" prefHeight="26.0" prefWidth="189.0" />
+      <Label layoutX="34.0" layoutY="22.0" prefHeight="38.0" prefWidth="201.0" text="Pedidos">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Text layoutX="663.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deixar selecionado para alterar" wrappingWidth="67.99995117187518" />
+    </children>
+</AnchorPane>

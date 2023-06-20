@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="245.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lojacosturafx.controllers.AdicionalController">
+    <children>
+        <VBox layoutX="24.0" layoutY="134.0" spacing="15.0">
+            <children>
+<!--                <Label text="ID">-->
+<!--                    <font>-->
+<!--                        <Font size="14.0" />-->
+<!--                    </font>-->
+<!--                </Label>-->
+                <Label text="Nome">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Multiplicador">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <VBox layoutX="112.0" layoutY="127.0" prefHeight="70.0" prefWidth="115.0" spacing="10.0">
+            <children>
+<!--                <TextField fx:id="tfId" />-->
+                <TextField fx:id="tfNome" />
+                <TextField fx:id="tfMultiplicador" prefHeight="26.0" prefWidth="118.0" />
+            </children>
+        </VBox>
+
+        <HBox layoutX="26.0" layoutY="202.0" spacing="10.0">
+            <children>
+                <Button fx:id="insertAdicionalButton" mnemonicParsing="false" onAction="#insertAdicionalButton" prefHeight="30.0" prefWidth="60.0" text="Insert" />
+                <Button fx:id="updateAdicionalButton" mnemonicParsing="false" onAction="#updateAdicionalButton" prefHeight="30.0" prefWidth="60.0" text="Update" />
+                <Button fx:id="deleteAdicionalButton" mnemonicParsing="false" onAction="#deleteAdicionalButton" prefHeight="30.0" prefWidth="60.0" text="Delete" />
+            </children>
+        </HBox>
+
+        <TableView fx:id="tvAdicionais" layoutX="238.0" layoutY="22.0" prefHeight="210.0" prefWidth="400.0">
+            <columns>
+                <TableColumn fx:id="tcId" prefWidth="91.99998474121094" text="ID" />
+                <TableColumn fx:id="tcNome" prefWidth="158.4000244140625" text="Nome" />
+                <TableColumn fx:id="tcMultiplicador" prefWidth="149.5999755859375" text="Multiplicador" />
+            </columns>
+        </TableView>
+
+      <Button fx:id="btnHome" layoutX="682.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onCliqueHome" text="Home" />
+      <Label layoutX="38.0" layoutY="86.0" text="obs: usar 1.05 para 5%, etc.." />
+      <Label layoutX="24.0" layoutY="33.0" prefHeight="38.0" prefWidth="201.0" text="Adicionais">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Text layoutX="684.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Para fazer o update e o delete no Adicional, eh preciso que tenha um adicional selecionado na tabela" wrappingWidth="93.59992675781268" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="245.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lojacosturafx.controllers.ClienteController">
+    <children>
+        <VBox layoutX="28.0" layoutY="62.0" spacing="15.0">
+            <children>
+                <Label text="Nome">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Telefone">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Email">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <VBox layoutX="87.0" layoutY="62.0" prefHeight="106.0" prefWidth="130.0" spacing="10.0">
+            <children>
+                <TextField fx:id="tfNome" />
+                <TextField fx:id="tfTelefone" />
+                <TextField fx:id="tfEmail" />
+            </children>
+        </VBox>
+
+        <HBox layoutX="26.0" layoutY="190.0" spacing="10.0">
+            <children>
+                <Button fx:id="insertClienteButton" mnemonicParsing="false" onAction="#insertClienteButton" prefHeight="30.0" prefWidth="60.0" text="Insert" />
+                <Button fx:id="updateClienteButton" mnemonicParsing="false" onAction="#updateClienteButton" prefHeight="30.0" prefWidth="60.0" text="Update" />
+                <Button fx:id="deleteClienteButton" mnemonicParsing="false" onAction="#deleteClienteButton" prefHeight="30.0" prefWidth="60.0" text="Delete" />
+            </children>
+        </HBox>
+
+        <TableView fx:id="tvClientes" layoutX="238.0" layoutY="22.0" onMouseClicked="#onCliqueTvCliente" prefHeight="210.0" prefWidth="400.0">
+            <columns>
+                <TableColumn fx:id="tcId" prefWidth="35.0" text="ID" />
+                <TableColumn fx:id="tcNome" prefWidth="120.0" text="Nome" />
+                <TableColumn fx:id="tcTelefone" prefWidth="120.0" text="Telefone" />
+                <TableColumn fx:id="tcEmail" prefWidth="120.0" text="Email" />
+            </columns>
+        </TableView>
+
+        <VBox layoutX="25.0" layoutY="342.0" spacing="15.0">
+            <children>
+                <Label text="Nome">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Tamanho">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <VBox layoutX="95.0" layoutY="336.0" prefHeight="67.0" prefWidth="130.0" spacing="10.0">
+            <children>
+                <TextField fx:id="tfNomeMedida" />
+                <TextField fx:id="tfTamanhoMedida" prefHeight="67.0" prefWidth="124.0" />
+            </children>
+        </VBox>
+
+        <HBox layoutX="26.0" layoutY="432.0" spacing="10.0">
+            <children>
+                <Button fx:id="insertMedidaButton" mnemonicParsing="false" onAction="#insertMedidaButton" prefHeight="30.0" prefWidth="60.0" text="Insert" />
+                <Button fx:id="updateMedidaButton" mnemonicParsing="false" onAction="#updateMedidaButton" prefHeight="30.0" prefWidth="60.0" text="Update" />
+                <Button fx:id="deleteMedidaButton" mnemonicParsing="false" onAction="#deleteMedidaButton" prefHeight="30.0" prefWidth="60.0" text="Delete" />
+            </children>
+        </HBox>
+
+        <TableView fx:id="tvMedidas" layoutX="238.0" layoutY="252.0" prefHeight="210.0" prefWidth="400.0">
+            <columns>
+                <TableColumn fx:id="tcIdMedida" prefWidth="63.199951171875" text="ID" />
+                <TableColumn fx:id="tcNomeMedida" prefWidth="208.0" text="Nome" />
+                <TableColumn fx:id="tcTamanhoMedida" prefWidth="128.80007934570312" text="Tamanho" />
+            </columns>
+        </TableView>
+      <Button fx:id="btnHome" layoutX="682.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onCliqueHome" text="Home" />
+      <Button fx:id="btnOrcamento" layoutX="682.0" layoutY="54.0" mnemonicParsing="false" onAction="#onCliqueOrcamento" onMouseClicked="#onCliqueHome" text="Orçamento" />
+      <Label layoutX="24.0" layoutY="12.0" prefHeight="38.0" prefWidth="201.0" text="Cliente">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="264.0" prefHeight="38.0" prefWidth="201.0" text="Medida">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="303.0" text="obs: usar ponto, em cm" />
+      <Text layoutX="686.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Para fazer insert na medida, o update e o delete no Cliente, eh preciso que tenha um cliente selecionado na tabela" wrappingWidth="93.59992675781268" />
+      <Text layoutX="686.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Para fazer o update e o delete na medida, eh preciso que tenha uma medida selecionada na tabela" wrappingWidth="93.59992675781245" />
+    </children>
+</AnchorPane>

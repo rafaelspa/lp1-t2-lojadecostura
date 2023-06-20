@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="245.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lojacosturafx.controllers.TecidoController">
+    <children>
+        <VBox layoutX="31.0" layoutY="123.0" spacing="15.0">
+            <children>
+<!--                <Label text="ID">-->
+<!--                    <font>-->
+<!--                        <Font size="14.0" />-->
+<!--                    </font>-->
+<!--                </Label>-->
+                <Label text="Nome">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label text="PrecoMetro">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <VBox layoutX="110.0" layoutY="123.0" prefHeight="67.0" prefWidth="112.0" spacing="10.0">
+            <children>
+<!--                <TextField fx:id="tfId" />-->
+                <TextField fx:id="tfNome" />
+                <TextField fx:id="tfPrecoMetro" />
+            </children>
+        </VBox>
+
+        <HBox layoutX="26.0" layoutY="202.0" spacing="10.0">
+            <children>
+                <Button fx:id="insertTecidoButton" mnemonicParsing="false" onAction="#insertTecidoButton" prefHeight="30.0" prefWidth="60.0" text="Insert" />
+                <Button fx:id="updateTecidoButton" mnemonicParsing="false" onAction="#updateTecidoButton" prefHeight="30.0" prefWidth="60.0" text="Update" />
+                <Button fx:id="deleteTecidoButton" mnemonicParsing="false" onAction="#deleteTecidoButton" prefHeight="30.0" prefWidth="60.0" text="Delete" />
+            </children>
+        </HBox>
+
+        <TableView fx:id="tvTecidos" layoutX="238.0" layoutY="22.0" prefHeight="210.0" prefWidth="400.0">
+            <columns>
+                <TableColumn fx:id="tcId" prefWidth="63.20001220703125" text="ID" />
+                <TableColumn fx:id="tcNome" prefWidth="211.99996948242188" text="Nome" />
+                <TableColumn fx:id="tcPrecoMetro" prefWidth="123.99990844726562" text="PrecoMetro" />
+            </columns>
+        </TableView>
+
+      <Button fx:id="btnHome" layoutX="682.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onCliqueHome" text="Home" />
+      <Label layoutX="34.0" layoutY="22.0" prefHeight="38.0" prefWidth="201.0" text="Tecidos">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Text layoutX="682.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Para fazer update ou delete, deixar um tecido selecionado" wrappingWidth="79.20002441406268" />
+    </children>
+</AnchorPane>

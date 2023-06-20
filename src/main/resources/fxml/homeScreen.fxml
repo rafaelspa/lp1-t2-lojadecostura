@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<GridPane fx:id="t" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lojacosturafx.controllers.HomeScreenController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="184.0000244140625" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="219.19998779296873" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="325.0" minWidth="10.0" prefWidth="197.60001220703123" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="124.8" minHeight="10.0" prefHeight="26.399975585937497" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="181.59999999999997" minHeight="0.0" prefHeight="26.399996948242176" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="155.2000030517578" minHeight="0.0" prefHeight="35.20001220703125" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="155.2000030517578" minHeight="10.0" prefHeight="35.20001220703125" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="155.2000030517578" minHeight="10.0" prefHeight="35.20001220703125" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="155.2000030517578" minHeight="10.0" prefHeight="35.20001220703125" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="155.2000030517578" minHeight="10.0" prefHeight="35.20001220703125" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="155.2000030517578" minHeight="10.0" prefHeight="35.20001220703125" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="155.2000030517578" minHeight="10.0" prefHeight="35.20001220703125" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Hyperlink fx:id="logoutLink" alignment="CENTER" onAction="#logoutAction" prefHeight="94.0" prefWidth="274.0" text="Log Out" GridPane.columnIndex="1" />
+      <Button fx:id="accountButton" mnemonicParsing="false" onAction="#accountAction" prefHeight="93.0" prefWidth="279.0" text="Conta">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="budgetButton" alignment="CENTER" mnemonicParsing="false" onAction="#budgetAction" prefHeight="58.0" prefWidth="349.0" text="Orçamentos" GridPane.rowIndex="2" />
+      <Button fx:id="orderButton" mnemonicParsing="false" onAction="#orderAction" prefHeight="58.0" prefWidth="438.0" text="Pedidos" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button fx:id="modelsButton" mnemonicParsing="false" onAction="#modelsAction" prefHeight="67.0" prefWidth="470.0" text="Modelos" GridPane.rowIndex="6" />
+      <Button fx:id="piecesButton" mnemonicParsing="false" onAction="#piecesAction" prefHeight="58.0" prefWidth="390.0" text="Peças" GridPane.rowIndex="5" />
+      <Button fx:id="fabricButton" mnemonicParsing="false" onAction="#fabricAction" prefHeight="58.0" prefWidth="409.0" text="Tecidos" GridPane.rowIndex="7" />
+      <Button fx:id="clientButton" mnemonicParsing="false" onMouseClicked="#clientAction" prefHeight="67.0" prefWidth="506.0" text="Clientes" GridPane.rowIndex="4" />
+      <Button fx:id="ColorButton" mnemonicParsing="false" onAction="#ColorAction" prefHeight="58.0" prefWidth="608.0" text="Cores" GridPane.rowIndex="8" />
+   </children>
+</GridPane>

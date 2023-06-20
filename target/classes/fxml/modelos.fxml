@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="245.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lojacosturafx.controllers.ModeloController">
+    <children>
+        <VBox layoutX="14.0" layoutY="123.0" spacing="15.0">
+            <children>
+<!--                <Label text="ID">-->
+<!--                    <font>-->
+<!--                        <Font size="14.0" />-->
+<!--                    </font>-->
+<!--                </Label>-->
+                <Label text="Nome">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label prefHeight="20.0" prefWidth="87.0" text="Multiplicador">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <VBox layoutX="108.0" layoutY="115.0" prefHeight="72.0" prefWidth="118.0" spacing="10.0">
+            <children>
+<!--                <TextField fx:id="tfId" />-->
+                <TextField fx:id="tfNome" />
+                <TextField fx:id="tfMultiplicador" prefHeight="26.0" prefWidth="118.0" />
+            </children>
+        </VBox>
+
+        <HBox layoutX="26.0" layoutY="202.0" spacing="10.0">
+            <children>
+                <Button fx:id="insertModeloButton" mnemonicParsing="false" onAction="#insertModeloButton" prefHeight="30.0" prefWidth="60.0" text="Insert" />
+                <Button fx:id="updateModeloButton" mnemonicParsing="false" onAction="#updateModeloButton" prefHeight="30.0" prefWidth="60.0" text="Update" />
+                <Button fx:id="deleteModeloButton" mnemonicParsing="false" onAction="#deleteModeloButton" prefHeight="30.0" prefWidth="60.0" text="Delete" />
+            </children>
+        </HBox>
+
+        <TableView fx:id="tvModelos" layoutX="238.0" layoutY="22.0" prefHeight="210.0" prefWidth="400.0">
+            <columns>
+                <TableColumn fx:id="tcId" prefWidth="35.0" text="ID" />
+                <TableColumn fx:id="tcNome" prefWidth="120.0" text="Nome" />
+                <TableColumn fx:id="tcMultiplicador" prefWidth="120.0" text="Multiplicador" />
+            </columns>
+        </TableView>
+
+      <Button fx:id="btnHome" layoutX="682.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onCliqueHome" text="Home" />
+      <Label layoutX="14.0" layoutY="23.0" prefHeight="38.0" prefWidth="201.0" text="Modelos">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="74.0" text="obs: usar 1.05 para 5%, etc.." />
+      <Text layoutX="682.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deixar selecionado para alterar" wrappingWidth="67.99995117187518" />
+    </children>
+</AnchorPane>

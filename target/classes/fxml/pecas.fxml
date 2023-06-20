@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="245.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lojacosturafx.controllers.PecaController">
+    <children>
+        <VBox layoutX="30.0" layoutY="123.0" spacing="15.0">
+            <children>
+<!--                <Label text="ID">-->
+<!--                    <font>-->
+<!--                        <Font size="14.0" />-->
+<!--                    </font>-->
+<!--                </Label>-->
+                <Label text="Nome">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Precobase">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <VBox layoutX="101.0" layoutY="123.0" prefHeight="70.0" prefWidth="121.0" spacing="10.0">
+            <children>
+<!--                <TextField fx:id="tfId" />-->
+                <TextField fx:id="tfNome" />
+                <TextField fx:id="tfPrecoBase" />
+            </children>
+        </VBox>
+
+        <HBox layoutX="26.0" layoutY="202.0" spacing="10.0">
+            <children>
+                <Button fx:id="insertPecaButton" mnemonicParsing="false" onAction="#insertPecaButton" prefHeight="30.0" prefWidth="60.0" text="Insert" />
+                <Button fx:id="updatePecaButton" mnemonicParsing="false" onAction="#updatePecaButton" prefHeight="30.0" prefWidth="60.0" text="Update" />
+                <Button fx:id="deletePecaButton" mnemonicParsing="false" onAction="#deletePecaButton" prefHeight="30.0" prefWidth="60.0" text="Delete" />
+            </children>
+        </HBox>
+
+        <TableView fx:id="tvPecas" layoutX="238.0" layoutY="22.0" onMouseClicked="#onCliqueTvPeca" prefHeight="210.0" prefWidth="400.0">
+            <columns>
+                <TableColumn fx:id="tcId" prefWidth="69.60005187988281" text="ID" />
+                <TableColumn fx:id="tcNome" prefWidth="177.5999755859375" text="Nome" />
+                <TableColumn fx:id="tcPrecoBase" prefWidth="152.00006103515625" text="Preco base" />
+            </columns>
+        </TableView>
+
+        <VBox layoutX="30.0" layoutY="350.0" spacing="15.0">
+            <children>
+                <!--                <Label text="ID">-->
+                <!--                    <font>-->
+                <!--                        <Font size="14.0" />-->
+                <!--                    </font>-->
+                <!--                </Label>-->
+                <Label text="Nome">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Tamanho">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <VBox layoutX="91.0" layoutY="350.0" prefHeight="70.0" prefWidth="130.0" spacing="10.0">
+            <children>
+                <!--                <TextField fx:id="tfId" />-->
+                <TextField fx:id="tfNomeMedida" />
+                <TextField fx:id="tfTamanhoMedida" />
+            </children>
+        </VBox>
+
+        <HBox layoutX="26.0" layoutY="432.0" spacing="10.0">
+            <children>
+                <Button fx:id="insertMedidaButton" mnemonicParsing="false" onAction="#insertMedidaButton" prefHeight="30.0" prefWidth="60.0" text="Insert" />
+                <Button fx:id="updateMedidaButton" mnemonicParsing="false" onAction="#updateMedidaButton" prefHeight="30.0" prefWidth="60.0" text="Update" />
+                <Button fx:id="deleteMedidaButton" mnemonicParsing="false" onAction="#deleteMedidaButton" prefHeight="30.0" prefWidth="60.0" text="Delete" />
+            </children>
+        </HBox>
+
+        <TableView fx:id="tvMedidas" layoutX="238.0" layoutY="252.0" prefHeight="210.0" prefWidth="400.0">
+            <columns>
+                <TableColumn fx:id="tcIdMedida" prefWidth="70.39997863769531" text="ID" />
+                <TableColumn fx:id="tcNomeMedida" prefWidth="198.40008544921875" text="Nome" />
+                <TableColumn fx:id="tcTamanhoMedida" prefWidth="130.40008544921875" text="Tamanho" />
+            </columns>
+        </TableView>
+        <Button fx:id="btnHome" layoutX="682.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onCliqueHome" text="Home" />
+      <Label layoutX="34.0" layoutY="22.0" prefHeight="38.0" prefWidth="201.0" text="Peças">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="268.0" prefHeight="38.0" prefWidth="201.0" text="Medidas">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="52.0" layoutY="85.0" text="obs: usar ponto" />
+      <Label layoutX="28.0" layoutY="315.0" text="obs: usar ponto, em cm" />
+      <Text layoutX="671.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Para fazer insert na medida, o update e o delete na Peca, eh preciso que tenha uma peca selecionada na tabela" wrappingWidth="93.59992675781268" />
+      <Text layoutX="671.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Para fazer  o update e o delete na Medida, eh preciso que tenha uma medida selecionada na tabela" wrappingWidth="93.59992675781268" />
+    </children>
+</AnchorPane>
